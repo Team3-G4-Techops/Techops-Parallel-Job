@@ -20,11 +20,18 @@ pipeline{
     	    sh 'sudo systemctl status jenkins'
           }
         }
+        stage('parallel-job'){
+          parallel{
+            stage('sub-job2 - constance'){
+              steps{
+                sh 'sudo systemctl status jenkins'
+                sh 'ps -ef'
+              }
+            }
+
+          }
+        }
       }
-      stage ('sub-job3 - constance'){
-        steps{
-          sh 'sudo systemctl status jenkins'
-          sh 'ps -ef'
         }
       }
     }
