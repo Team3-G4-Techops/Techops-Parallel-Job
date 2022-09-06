@@ -14,6 +14,11 @@ pipeline{
 			      sh 'ps -ef'
           }
         }
+          stage('sub-job2 - Kingue')
+            steps{
+               sh 'ps -ef'
+               sh 'sudo systemctl status Jenkins'
+        }
       }
     }
   }
