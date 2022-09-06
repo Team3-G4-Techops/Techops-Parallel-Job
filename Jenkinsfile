@@ -18,7 +18,11 @@ pipeline{
             steps{
                sh 'ps -ef'
                sh 'sudo systemctl status jenkins'
+<<<<<<< HEAD
                sh 'date'
+=======
+	       sh 'date'
+>>>>>>> 838c123e5532de2fa4cd502125b724e8e7798fe2
           }
         }
       }
