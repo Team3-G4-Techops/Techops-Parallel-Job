@@ -21,6 +21,12 @@ pipeline{
           }
         }
       }
+      stage ('sub-job3 - constance'){
+        steps{
+          sh 'sudo systemctl status jenkins'
+          sh 'ps -ef'
+        }
+      }
     }
   }
 }
