@@ -30,6 +30,12 @@ pipeline{
             sh 'sudo systemctl status jenkins'
           }
         }
+        stage('sub-job2 - Wille'){
+          steps{
+            sh 'sudo systemctl status jenkins'
+            sh 'ps -ef'
+          }
+        }
       }
     }
   }
